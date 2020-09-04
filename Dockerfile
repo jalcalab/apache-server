@@ -1,6 +1,3 @@
-FROM registry.access.redhat.com/rhel
-USER root
-RUN yum install httpd -y
+FROM httpd:2.4
 COPY index.html /var/www/html/
-EXPOSE 80
-CMD /usr/sbin/httpd -D FOREGROUND
+EXPOSE 8080
