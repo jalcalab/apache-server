@@ -1,4 +1,4 @@
-FROM rhel7:latest
+FROM rhel:latest
 USER root
 RUN yum install httpd -y
 COPY index.html /var/www/html/
