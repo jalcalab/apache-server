@@ -1,4 +1,4 @@
-FROM rhel:latest
+FROM registry.access.redhat.com/rhel
 USER root
 RUN yum install httpd -y
 COPY index.html /var/www/html/
