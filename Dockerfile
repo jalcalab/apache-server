@@ -1,4 +1,5 @@
-FROM centos:latest
-RUN yum -y install httpd
+FROM rhel7:latest
+USER root
+RUN yum install httpd -y
 COPY index.html /var/www/html/
-CMD sudo systemctl restart httpd
+CMD /usr/sbin/httpd -D FOREGROUND
